@@ -8,6 +8,9 @@ var endx = 0;
 var endy = 0;
 
 $(document).ready(function () {
+    if (localStorage.getItem("maxscore") === null) {
+        localStorage.setItem("maxscore", 0);
+    }
     $('#maxscore').text(localStorage.getItem("maxscore"));
     prepareForMobile();
     newgame();
